@@ -1,0 +1,176 @@
+@import "/home/machado/.config/waybar/colors.css";
+
+/* --- Configurações Globais --- */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrains Mono", "Font Awesome 6 Free";
+    font-weight: bold;
+    font-size: 12px;
+    min-height: 0;
+    transition: all 0.3s ease; /* Transição suave para efeitos */
+}
+
+/* --- Barra Principal --- */
+window#waybar {
+    background: @background;
+    color: @on_surface;
+    margin: 5px; /* Pequena margem para a barra "flutuar" como um todo */
+    border-radius: 0px; /* Cantos arredondados para a barra inteira */
+    /* Se a correção dos módulos falhar, descomente abaixo: */
+    min-height: 18px;
+}
+
+/* --- Estilo dos Tooltips (dicas ao passar o mouse) --- */
+tooltip {
+    background: @surface_container_low;
+    border: 1px solid @outline;
+    border-radius: 4px;
+}
+tooltip label {
+    color: @on_surface;
+}
+
+/* * CORREÇÃO CRÍTICA: Ajustado margin vertical para 3px para atingir 18px de altura.
+ * Cálculo: 3px (top) + 12px (fonte) + 3px (bottom) = 18px
+*/
+/* --- Estilo "Pill" para Módulos --- */
+#custom-distro,
+#clock,
+#cpu,
+#memory,
+#tray,
+#pulseaudio,
+#network,
+#bluetooth,
+#battery,
+#custom-notification,
+#custom-scratchpad,
+#mpris,
+#backlight,
+#mode,
+#workspace,
+#window {
+    padding: 0 10px;
+    margin: 3px 3px; /* CORRIGIDO: Era 4px 3px */
+    border-radius: 4px;
+}
+
+/* --- Padrão de Cores para os Módulos --- */
+
+/* Grupo Primário (Foco principal) */
+#window {
+    background-color: @primary_container;
+    color: @on_primary_container;
+}
+
+/* Grupo Secundário (Informações do Sistema e Energia) */
+#clock,
+#cpu,
+#memory,
+#custom-notification,
+#custom-distro,
+#custom-scratchpad,
+#backlight,
+#network,
+#bluetooth,
+#pulseaudio,
+#battery {
+    background-color: @secondary_container;
+    color: @on_secondary_container;
+}
+
+/* Grupo de Mídia (destacado) */
+#mpris {
+    background-color: @primary;
+    color: @on_tertiary; /* Mudei para on_tertiary, já que a cor original era @on_tertiary, mas o primary é muito claro para on_tertiary. Se o @on_tertiary for o preto/escuro que você queria, mantenha. */
+}
+
+/* Módulos com Estilo Especial */
+#tray {
+    background-color: @secondary_container;
+}
+#window.empty {
+    background-color: transparent;
+    color: transparent; /* Certifique-se que não sobram resquícios de texto */
+}
+
+/* --- Workspaces (Estilo inalterado - Corrigido para 18px) --- */
+#tags button {
+    padding: 0 6px;
+    margin: 3px 3px; /* CORRIGIDO: Era 4px 3px */
+    border-radius: 4px;
+    color: @primary;
+    background-color: @secondary_container;
+    transition: background-color 0s ease;
+}
+#workspaces button {
+    padding: 0 6px;
+    margin: 3px 3px; /* CORRIGIDO: Era 4px 3px */
+    border-radius: 4px;
+    color: @primary;
+    background-color: @secondary_container;
+    transition: background-color 0.3s ease;
+}
+#workspaces button:hover {
+    background-color: @surface_container_highest;
+}
+#tags button.focused,
+#workspaces button.occupied,
+#workspaces button.focused {
+    background-color: @primary;
+    color: @surface_container;
+}
+#workspaces button.occupied:not(.focused):not(.urgent) {
+    background-color: @primary_container; /* Ex: Roxo claro para indicar que há algo aqui */
+    color: @on_primary_container;
+}
+#tags button.urgent,
+#workspaces button.urgent {
+    background-color: @error;
+    color: @on_error;
+}
+
+/* --- Estados dos Módulos --- */
+#battery.charging,
+#battery.plugged {
+    color: @primary;
+}
+
+#battery.warning:not(.charging) {
+    color: @on_error_container;
+}
+
+#battery.critical:not(.charging) {
+    color: @on_error;
+}
+
+#network.disconnected,
+#network.disabled {
+    color: @outline;
+    background-color: @surface_container_highest;
+}
+/* Limpando workspaces vazios e não focados */
+#tags button:not(.occupied):not(.focused) {
+    font-size: 0;
+    min-width: 0;
+    min-height: 0;
+    margin: -17px;
+    padding: 0;
+    color: transparent;
+    background-color: transparent;
+}
+
+#bluetooth.disabled,
+#pulseaudio.muted,
+#bluetooth.off {
+    color: @outline;
+    background-color: @surface_container_highest;
+}
+
+#bluetooth.connected {
+    color: @tertiary;
+}
+#clock.calendar {
+    border-radius: 4px;
+}

@@ -1,0 +1,51 @@
+[config]
+# Base directory for output, will be created if it doesn't exist
+output_dir = "~/.local/share/matugen"
+
+# Available systems: material3, breeze
+system = "material3"
+
+# If true, this will use the pre-generated cached colors if available
+# If true, matugen will output diagnostics for templates
+verbose = true
+
+mode = "dark"
+
+extract_from_source = true
+
+# Templates section - define your output templates here
+[templates.waybar]
+input_path = "~/.config/matugen/templates/colors.css"
+output_path = "~/.config/waybar/colors.css"
+#post_hook = "pkill -SIGUSR2 waybar"
+
+[templates.alacritty]
+input_path = '~/.config/matugen/templates/alacritty.toml'
+output_path = '~/.config/alacritty/colors.toml'
+
+
+[templates.gtk3]
+input_path = "/home/machado/.config/matugen/templates/gtk-colors.css"
+output_path = '~/.config/gtk-3.0/colors.css'
+
+
+[templates.gtk4]
+input_path = "/home/machado/.config/matugen/templates/gtk-colors.css"
+output_path = '~/.config/gtk-4.0/colors.css'
+
+[templates.fuzzel]
+input_path = '/home/machado/.config/matugen/templates/fuzzel.ini'
+output_path = '~/.config/fuzzel/colors.ini'
+
+
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+
+[templates.mango]
+input_path = "~/.config/matugen/templates/mangowc.conf"
+output_path = "~/.config/mango/colors.conf"
+
+[templates.swaylock]
+input_path = '~/.config/matugen/templates/swaylock'
+output_path = '~/.config/swaylock/swaylock.conf'
