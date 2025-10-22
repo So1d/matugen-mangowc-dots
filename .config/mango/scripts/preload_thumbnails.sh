@@ -13,7 +13,6 @@ find "$WALLPAPER_DIR" -type f \( -iname '*.jpg' -o -iname '*.png' -o -iname '*.j
     thumb_name=$(basename "$wall")
     thumbnail_path="$THUMBNAIL_DIR/$thumb_name.png"
 
-    # Gera a miniatura se ela ainda não existir
     if [ ! -f "$thumbnail_path" ]; then
 
         magick "$wall" -thumbnail 256x256^ -gravity center -extent 256x256 "$thumbnail_path"

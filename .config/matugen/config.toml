@@ -2,16 +2,10 @@
 # Base directory for output, will be created if it doesn't exist
 output_dir = "~/.local/share/matugen"
 
-# Available systems: material3, breeze
-system = "material3"
 
 # If true, this will use the pre-generated cached colors if available
 # If true, matugen will output diagnostics for templates
 verbose = true
-
-mode = "dark"
-
-extract_from_source = true
 
 # Templates section - define your output templates here
 [templates.waybar]

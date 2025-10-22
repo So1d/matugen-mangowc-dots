@@ -17,10 +17,10 @@ indicator-thickness=12
 line-uses-inside
 
 # -------------------------------------------------------------------
-# CORES (Geradas pelo Matugen)
+# COLORS
 # -------------------------------------------------------------------
 
-# Cor de fundo (overlay)
+# Cor de fundo
 color={{colors.surface.default.hex_stripped}}B3
 
 # Cores do anel
@@ -30,17 +30,17 @@ ring-wrong-color={{colors.error.default.hex_stripped}}FF
 ring-ver-color={{colors.tertiary.default.hex_stripped}}FF
 ring-caps-lock-color={{colors.tertiary_container.default.hex_stripped}}FF
 
-# Cores internas do anel (fundo)
+# Cores internas do anel
 inside-color={{colors.surface.default.hex_stripped}}88
 inside-clear-color={{colors.surface_variant.default.hex_stripped}}88
 inside-wrong-color={{colors.error_container.default.hex_stripped}}88
 inside-ver-color={{colors.primary_container.default.hex_stripped}}88
 
-# Cor da linha (separador)
+# Cor da linha
 line-color=00000000 # Linha invisível
 
 # -------------------------------------------------------------------
-# TEXTO (Relógio e Data)
+# TEXT
 # -------------------------------------------------------------------
 clock
 timestr=%H:%M
@@ -49,7 +49,6 @@ font=JetBrains Mono
 font-size=36
 
 
-# Cores do texto
 text-color={{colors.on_surface.default.hex_stripped}}FF
 text-clear-color={{colors.on_secondary_container.default.hex_stripped}}FF
 text-wrong-color={{colors.on_error_container.default.hex_stripped}}FF

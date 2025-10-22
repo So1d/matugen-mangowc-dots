@@ -5,7 +5,6 @@
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
 
-  // Ordem dos módulos atualizada
   "modules-left": ["custom/notification", "tray", "dwl/tags", "mpris"],
   "modules-center": ["dwl/window"],
   "modules-right": ["bluetooth", "network", "pulseaudio", "battery", "clock"],
@@ -21,20 +20,6 @@
     "hide-vacant": true,
     "expand": true,
     "tag-labels": [],
-  },
-
-  "ext/workspaces": {
-    "format": "{icon}",
-    "ignore-hidden": true,
-    "on-click": "activate",
-    "sort-by-id": true,
-  },
-  "sway/mode": {
-    "format": " {}",
-  },
-  "sway/workspaces": {
-    "all-outputs": false,
-    "format": "{index}",
   },
   "mpris": {
     "format": "{artist} - {title}",
@@ -61,36 +46,7 @@
       ".*evince.*": "Evince",
     },
   },
-  "sway/window": {
-    "tooltip": true,
-    "separate-outputs": true,
-    "max-length": 30,
-    "rewrite": {
-      ".*zen.*": "Zen Browser",
-      ".*alacritty.*": "Terminal",
-      ".*Code.*": "VSCode",
-      ".*zed.*": "Zed",
-      ".*youtube-music-desktop-app.*": "YT Music",
-      ".*evince.*": "Evince",
-    },
-  },
-  "niri/window": {
-    "tooltip": true,
-    "separate-outputs": true,
-    "max-length": 30,
-    "rewrite": {
-      ".*zen.*": "Zen Browser",
-      ".*alacritty.*": "Terminal",
-      ".*Code.*": "VSCode",
-      ".*zed.*": "Zed",
-      ".*youtube-music-desktop-app.*": "YT Music",
-      ".*evince.*": "Evince",
-    },
-  },
-  "custom/layout": {
-    "tooltip": false,
-    "exec": "swaymsg -mrt subscribe '[\"input\"]' | jq -r --unbuffered \"select(.change == \\\"xkb_layout\\\") | .input | select(.type == \\\"keyboard\\\") | .xkb_active_layout_name | .[0:2]\"",
-  },
+
   "custom/zypper": {
     "format": "{} ",
     "interval": 3600,
@@ -197,15 +153,7 @@
     "on-click-right": "pavucontrol",
     "tooltip": true,
   },
-  "custom/scratchpad": {
-    "format-text": "{}",
-    "return-type": "json",
-    "interval": 3,
-    "exec": "/home/machado/.config/waybar/modules/scratchpad-indicator.sh 2> /dev/null",
-    "exec-if": "exit 0",
-    "on-click": "swaymsg 'scratchpad show'",
-    "on-click-right": "swaymsg 'move scratchpad'",
-  },
+
   "custom/notification": {
     "tooltip": true,
     "format": "{icon}",

@@ -1,7 +1,6 @@
 swww-daemon
 
 swaync &
-bluetooth off
 
 xsettingsd &
 bash $HOME/.config/sway/scripts/gammarelay.sh
