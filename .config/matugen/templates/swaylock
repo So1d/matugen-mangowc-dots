@@ -57,3 +57,4 @@ text-caps-lock-color={{colors.on_tertiary_container.default.hex_stripped}}FF
 
 fade-in=3
 grace=3
+hide-keyboard-layout

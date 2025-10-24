@@ -41,7 +41,6 @@ tooltip label {
 #mpris,
 #backlight,
 #mode,
-#workspace,
 #window {
     padding: 0 10px;
     margin: 3px 3px;
@@ -80,7 +79,11 @@ tooltip label {
     background-color: transparent;
     color: transparent;
 }
-
+#tags {
+    background: transparent;
+    padding: 0 0px;
+    margin: 0px 0px;
+}
 #tags button {
     padding: 0 6px;
     margin: 3px 3px;
@@ -89,29 +92,13 @@ tooltip label {
     background-color: @secondary_container;
     transition: background-color 0s ease;
 }
-#workspaces button {
-    padding: 0 6px;
-    margin: 3px 3px;
-    border-radius: 4px;
-    color: @primary;
-    background-color: @secondary_container;
-    transition: background-color 0.3s ease;
-}
-#workspaces button:hover {
-    background-color: @surface_container_highest;
-}
-#tags button.focused,
-#workspaces button.occupied,
-#workspaces button.focused {
+
+#tags button.focused {
     background-color: @primary;
     color: @surface_container;
 }
-#workspaces button.occupied:not(.focused):not(.urgent) {
-    background-color: @primary_container;
-    color: @on_primary_container;
-}
-#tags button.urgent,
-#workspaces button.urgent {
+
+#tags button.urgent {
     background-color: @error;
     color: @on_error;
 }
