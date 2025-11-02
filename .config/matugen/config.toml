@@ -43,3 +43,7 @@ output_path = "~/.config/mango/colors.conf"
 [templates.swaylock]
 input_path = '~/.config/matugen/templates/swaylock'
 output_path = '~/.config/swaylock/swaylock.conf'
+
+[templates.qt5ct]
+input_path = '~/.config/matugen/templates/qtct-colors.conf'
+output_path = '~/.config/qt6ct/colors/matugen.conf'

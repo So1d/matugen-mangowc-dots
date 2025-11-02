@@ -12,7 +12,7 @@
     margin: 10px;
     padding: 0;
     background: transparent;
-    border-radius: 4px;
+    border-radius: 2px;
 }
 .notification-row:hover,
 .notification-row:focus {
@@ -23,9 +23,9 @@
 .notification {
     background-color: @background;
     color: @background;
-    border-radius: 4px;
+    border-radius: 2px;
     padding: 10px;
-    border: 1px solid @primary;
+    border: 1px solid @primary_container;
 }
 
 /* Conteúdo interno */
@@ -36,7 +36,7 @@
 
 /* Título e corpo (escopados para evitar conflito global) */
 .notification .title {
-    color: @primary;
+    color: @primary_container;
     font-size: 16px;
 }
 .notification .body {
@@ -47,9 +47,9 @@
 .control-center {
     background-color: @background;
     color: @on_surface;
-    border-radius: 4px;
+    border-radius: 2px;
     padding: 10px;
-    border: 1px solid @primary;
+    border: 1px solid @primary_container;
     margin-bottom: 2px;
 }
 
@@ -57,13 +57,13 @@
 .control-center .control-center-button {
     background-color: @background;
     color: @on_secondary_container;
-    border-radius: 4px;
+    border-radius: 2px;
     padding: 5px 10px;
     margin: 5px;
     transition: all 0.3s ease;
 }
 .control-center .control-center-button:hover {
-    background-color: @primary;
+    background-color: @primary_container;
 }
 /* Estado ativo para toggles */
 .control-center .control-center-button.toggle:checked {
@@ -80,7 +80,7 @@
 .notification-group-close-button {
     background-color: @error_container;
     color: @on_error_container;
-    border-radius: 4px;
+    border-radius: 2px;
     padding: 2px 5px;
     margin: 5px;
 }
@@ -93,8 +93,8 @@
 /* --- Estilo para Notificações com Barra de Progresso (OSD) --- */
 .notification.progressbar {
     background: alpha(@surface_container_low, 0.85);
-    border: 2px solid @primary;
-    border-radius: 4px; /* Efeito pílula */
+    border: 2px solid @primary_container;
+    border-radius: 2px; /* Efeito pílula */
     padding: 12px;
 }
 
@@ -118,13 +118,7 @@
     min-height: 12px;
     border-radius: 4px;
     background-image: none;
-    background-color: @primary; /* Cor da barra preenchida */
-}
-/* Aumenta o tamanho dos ícones do aplicativo nas notificações */
-/* Atingindo ícones que estão no texto (como o ícone de volume ao lado do "Volume") */
-.notification-body label {
-    /* Garante que o texto principal não seja afetado */
-    /* Você pode precisar definir o font-size aqui, se o ícone for menor que o texto */
+    background-color: @primary_container; /* Cor da barra preenchida */
 }
 
 /* Tente o seletor de ícone genérico do GTK para elementos de imagem/símbolo */

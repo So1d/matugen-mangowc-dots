@@ -5,9 +5,24 @@
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
 
-  "modules-left": ["custom/notification", "tray", "dwl/tags", "mpris"],
-  "modules-center": ["dwl/window"],
-  "modules-right": ["bluetooth", "network", "pulseaudio", "battery", "clock"],
+  "modules-left": ["custom/distro", "dwl/tags", "dwl/window"],
+  "modules-center": ["custom/notification", "clock", "tray"],
+  "modules-right": [
+    "mpris",
+    "bluetooth",
+    "network",
+    "pulseaudio",
+    "group/hardware",
+    "battery",
+  ],
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": ["memory", "cpu"],
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false,
+    },
+  },
   "backlight": {
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
@@ -22,20 +37,22 @@
     "tag-labels": [],
   },
   "mpris": {
-    "format": "{artist} - {title}",
-    "format-paused": "{status_icon} {artist} - {title}",
+    "format": "{title} - {artist}",
+    "format-paused": "<i>{title} - {artist}</i>",
     "title-len": 15,
     "artist-len": 10,
-    "player-icons": {
+    /*    "player-icons": {
       "default": "▶",
+      "mpv": "󰝚",
     },
     "status-icons": {
-      "paused": "⏸",
-    },
+      "paused": "󰏤",
+    },*/
   },
+
   "dwl/window": {
     "tooltip": true,
-    "separate-outputs": true,
+    "separate-outputs": false,
     "max-length": 30,
     "rewrite": {
       ".*zen.*": "Zen Browser",
@@ -46,9 +63,12 @@
       ".*evince.*": "Evince",
     },
   },
-
+  "custom/distro": {
+    "format": "",
+    "tooltip": false,
+  },
   "custom/zypper": {
-    "format": "{} ",
+    "format": "󰚰",
     "interval": 3600,
     "exec": "zypper lu | grep 'v \\+|' | wc -l; echo 'packages to update'",
     "exec-if": "exit 0",
@@ -67,7 +87,7 @@
     "spacing": 10,
   },
   "clock": {
-    "format": "{:%H:%M}",
+    "format": "{:%H:%M - %B %d |}",
     "format-alt": "{:%A, %B %d, %Y (%R)}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
@@ -135,7 +155,7 @@
     "on-click-right": "blueman-manager",
   },
   "pulseaudio": {
-    "format": "{icon}",
+    "format": "{icon} {volume}%",
     "format-alt": "{volume} {icon}",
     "format-alt-click": "click-middle",
     "format-muted": "",
@@ -153,10 +173,9 @@
     "on-click-right": "pavucontrol",
     "tooltip": true,
   },
-
   "custom/notification": {
     "tooltip": true,
-    "format": "{icon}",
+    "format": "{icon} |",
     "format-icons": {
       "notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
       "none": "",

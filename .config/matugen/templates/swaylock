@@ -55,6 +55,4 @@ text-wrong-color={{colors.on_error_container.default.hex_stripped}}FF
 text-ver-color={{colors.on_primary_container.default.hex_stripped}}FF
 text-caps-lock-color={{colors.on_tertiary_container.default.hex_stripped}}FF
 
-fade-in=3
-grace=3
 hide-keyboard-layout

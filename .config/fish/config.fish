@@ -8,4 +8,6 @@ alias wlm="wl-mirror eDP-1"
 alias wlm-c="wl-mirror -c eDP-1"
 alias fish-alias="nano .config/fish/config.fish"
 alias zen='flatpak run app.zen_browser.zen'
+alias waybar-reset='killall waybar && waybar & disown && exit 0'
+alias tlauncher='~/Jogos/tlauncher/TLauncher.jar java -jar && exit'  
 end
