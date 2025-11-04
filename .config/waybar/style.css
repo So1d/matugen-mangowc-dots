@@ -109,8 +109,8 @@ tooltip label {
  *  Module States
  * =========================================================================== */
 #mpris {
-    color: @background;
-    background-color: @on_primary_container;
+    color: @on_background;
+    background-color: @primary_container;
 }
 
 /* Tags */

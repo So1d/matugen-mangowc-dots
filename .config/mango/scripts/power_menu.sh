@@ -10,19 +10,20 @@ if [ -z "$SELECTED" ]; then
 fi
 
 case "$SELECTED" in
+    " Shutdown")
+        systemctl poweroff
+        ;;
+    " Reboot")
+        systemctl reboot
+        ;;
+    " Suspend")
+        systemctl suspend
+        ;;
     " Lock")
         swaylock -C ~/.config/swaylock/swaylock.conf
         ;;
     " Logout")
         mmsg -q
         ;;
-    " Suspend")
-        systemctl suspend
-        ;;
-    " Reboot")
-        systemctl reboot
-        ;;
-    " Shutdown")
-        systemctl poweroff
-        ;;
+
 esac

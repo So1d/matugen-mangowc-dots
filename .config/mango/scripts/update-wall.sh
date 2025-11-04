@@ -54,5 +54,6 @@ swww img "$HOME/.config/matugen/wallpapers/current_wallpaper" \
 --transition-type any \
 --transition-step 35 \
 --transition-fps 60
-mmsg -d reload_config
+
+
 exit 0
