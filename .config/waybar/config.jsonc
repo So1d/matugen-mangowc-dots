@@ -40,7 +40,7 @@
     "format": "{title} - {artist}",
     "format-paused": "<i>{title} - {artist}</i>",
     "title-len": 15,
-    "artist-len": 10,
+    "artist-len": 15,
     /*    "player-icons": {
       "default": "▶",
       "mpv": "󰝚",

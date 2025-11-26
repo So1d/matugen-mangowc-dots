@@ -2,7 +2,7 @@ swww-daemon
 
 swaync &
 flatpak run com.discordapp.Discord &
-xsettingsd &
+
 
 bash $HOME/.config/mango/scripts/preload_thumbnails.sh
 swww img "$HOME/.config/matugen/wallpapers/current_wallpaper" \

@@ -40,7 +40,7 @@ SELECTION="$WALLPAPER_DIR/$SELECTED_BASENAME"
 # Aplica de fato
 cp "$SELECTION" "$WALL_COPY"
 echo "pré matugem"
-matugen image "$WALL_COPY"
+matugen  image "$WALL_COPY" #-t scheme-fidelity # -m light
 #killall waybar
 #nohup waybar &
 mmsg -d reload_config
