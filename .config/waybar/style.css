@@ -90,18 +90,17 @@ tooltip label {
  * =========================================================================== */
 
 #tags {
-    background: @secondary_container;
+    background: transparent;
     padding: 0;
-    margin: 3px 3px;
-    border-radius: 2px;
+    margin: 0px 0;
 }
 
 #tags button {
     padding: 0 6px;
-    margin: 0;
-    border-radius: 0;
+    margin: 3px 3;
+    border-radius: 2px;
     color: @on_secondary_container;
-    background-color: transparent;
+    background-color: @secondary_container;
     transition: all 0s linear;
 }
 

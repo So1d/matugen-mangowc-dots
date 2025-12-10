@@ -19,7 +19,7 @@ case "$ACTION" in
     "3. Tela Cheia (Arquivo)")
         sleep 0.2 && grim "$SS_FILE" ;;
     "4. Tela Cheia (Clipboard)")
-        grim - | wl-copy ;;
+        sleep 0.2 && grim - | wl-copy ;;
 esac
 
 if [ -n "$ACTION" ]; then
