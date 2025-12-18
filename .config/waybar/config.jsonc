@@ -33,7 +33,7 @@
   "dwl/tags": {
     "num-tags": 9,
     "hide-vacant": true,
-    "expand": true,
+    "expand": false,
     "tag-labels": [],
   },
   "mpris": {

@@ -9,6 +9,7 @@ send_notification() {
     local text_body=$4
 
     notify-send -u critical \
+                -c OSD \
                 -t 1500 \
                 -h "int:value:$value" \
                 -h "string:x-canonical-private-synchronous:osd-$type" \
